@@ -1,5 +1,7 @@
 # RemoteImageFetch
 
+[![Build Status](https://travis-ci.org/livelink/remote_image_fetch.svg?branch=master)](https://travis-ci.org/livelink/remote_image_fetch)
+
 Use Curl::Multi with support for filterable Location: redirects.  
 
 The intended use is fetching user specified URIs with libcurl from an application server, while blocking access to local hosts.
@@ -22,6 +24,7 @@ Or install it yourself as:
 
 ## Usage
 
+```ruby
 downloader = RemoteImageFetch.new(ip_blacklist: /^(127\.0\.0|10|192\.168)\./)
 
 downloader.download(raw_url) do |result|
@@ -33,6 +36,7 @@ downloader.download(raw_url) do |result|
 end
 
 downloader.run
+```
 
 
 ## Development
