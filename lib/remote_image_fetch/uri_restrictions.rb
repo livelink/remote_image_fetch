@@ -3,7 +3,7 @@ require 'uri'
 
 class RemoteImageFetch
   # Wrap cURL response as if it's an error
-  class URI_Restrictions
+  class UriRestrictions
     def initialize(options = {})
       @schemes = options[:schemes] || ['http', 'https']
       @ports   = options[:ports] || [80, 443, 8080]

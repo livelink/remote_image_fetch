@@ -28,7 +28,7 @@ class RemoteImageFetch
     def handle_complete(*_args)
       case response_code
       when 301, 302, 303
-        # ignore
+        # handled by handle_redirect
       when 200
         fetcher.report_done(self)
       else

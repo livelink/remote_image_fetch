@@ -14,7 +14,7 @@ class RemoteImageFetch
     @max_parallel  = options[:max_parallel]  || 16
     @max_redirects = options[:max_redirects] || 4
 
-    @uri_restrictions = RemoteImageFetch::URI_Restrictions.new(options)
+    @uri_restrictions = RemoteImageFetch::UriRestrictions.new(options)
 
     @change_flagged = false
     @core = Curl::Multi.new
